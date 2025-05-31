@@ -1,17 +1,1 @@
-# Кэш и временные файлы Python
-__pycache__/
-*.py[cod]
-*.pyo
 
-# Логи
-*.log
-
-# Секреты
-.env
-
-# VSCode
-.vscode/
-
-# OS junk files
-.DS_Store
-Thumbs.db
