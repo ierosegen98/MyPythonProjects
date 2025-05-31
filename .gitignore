@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+
+# VSCode project settings
+.vscode/
+
+# Environment variables
+.env
+
+# Logs and reports
+*.log
+
+# Windows files
+Thumbs.db
+Desktop.ini
+
+# macOS junk
+.DS_Store
+
+# Python virtualenv
+venv/
