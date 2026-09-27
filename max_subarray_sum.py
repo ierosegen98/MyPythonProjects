@@ -1,3 +1,4 @@
+"""Функция принимает список чисел и возвращает максимальную сумму подмассива и сам подмассив."""
 def max_subarray_sum(nums: list) -> int:
     summ = 0
     max_subarray = []
@@ -10,6 +11,5 @@ def max_subarray_sum(nums: list) -> int:
     return summ, f'(подмассив: {max_subarray})'
 
 
-# Тест
 nums = [-2,1,-3,4,-1,2,1,-5,4]
-print(*max_subarray_sum(nums))  # 6 (подмассив [4,−1,2,1])
+print(*max_subarray_sum(nums))
