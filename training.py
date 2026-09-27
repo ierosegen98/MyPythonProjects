@@ -24,3 +24,4 @@ def generate_password(chars, length):
 length = int(input('Введите длину пароля:'))
 chars = collect_chars()
 print(*generate_password(chars, length), sep='')
+
