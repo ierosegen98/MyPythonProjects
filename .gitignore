@@ -22,3 +22,7 @@ Desktop.ini
 
 # Python virtualenv
 venv/
+
+*.db
+page_debug.html
+routes/
