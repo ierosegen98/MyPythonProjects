@@ -1,27 +1,29 @@
-"""Функция принимает список чисел и возвращает максимальную сумму подмассива и сам подмассив."""
-def max_subarray_sum(nums: list) -> tuple[int, list[int]]:
-    if nums == []:
+def max_subarray_sum(nums: list[int]) -> tuple[int, list[int]]:
+    '''Функция принимает список чисел и возвращает максимальную сумму подмассива и сам подмассив.'''
+    if not nums:
         return 0, []
-    
-    current_sum = min(nums)
-    best_sum = min(nums)
+
+    current_sum = nums[0]
+    best_sum = nums[0]
     current_start = 0
     best_start = 0
     best_end = 0
 
     for i in range(1, len(nums)):
-        if nums[i] > current_sum + nums[i]:
+        if current_sum < 0:
             current_sum = nums[i]
             current_start = i
-        else: 
-            current_sum += nums[i] 
-            if current_sum > best_sum: 
-                best_sum = current_sum
-                best_start = current_start
-                best_end = i
-        
-    return best_sum, f'подмассив: {nums[best_start:best_end + 1]}'
+
+        else:
+            current_sum += nums[i]
+
+        if current_sum > best_sum:
+            best_sum = current_sum
+            best_start = current_start
+            best_end = i
+    return best_sum, nums[best_start:best_end + 1]
 
 
-nums = [-2,1,-3,4,-1,2,1,-5,4]
-print(*max_subarray_sum(nums))
+nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+best_sum, subarray = max_subarray_sum(nums)
+print(f"{best_sum} (подмассив {subarray})")

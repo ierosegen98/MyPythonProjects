@@ -1,9 +1,11 @@
-"""Функция принимает строку и возвращает словарь, где ключами являются символы, а значениями - их частота в строке."""
+
 from collections import Counter
 
-def char_frequency(s: str) -> dict:
-    count = Counter(s)
+
+def char_frequency(text: str) -> dict[str, int]:
+    """Возвращает частоту каждого символа в строке."""
+    count = Counter(text)
     return dict(count)
 
-s = "abracadabra"
-print(char_frequency(s))
+text = "abracadabra"
+print(char_frequency(text))
