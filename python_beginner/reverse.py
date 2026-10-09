@@ -1,4 +1,3 @@
-
 def reverse_words(text: str) -> str:
     """Возвращает строку со словами в обратном порядке."""
     reversed_words = text.split()[::-1]
